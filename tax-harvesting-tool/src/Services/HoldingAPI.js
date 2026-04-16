@@ -1,6 +1,6 @@
 // Mock APIs using Promises or local JSON
 
-const Capital_Data = [
+const holdingData = [
     {
         "coin": "USDC",
         "coinName": "USDC",
@@ -404,4 +404,6 @@ const Capital_Data = [
 ]
 
 
-export default Capital_Data;
+export const getHolding = () => {
+    return Promise.resolve(holdingData);
+}
