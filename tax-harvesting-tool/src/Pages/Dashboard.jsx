@@ -12,8 +12,7 @@ import Table from '../Components/Table';
 const Dashboard = () => {
 
     // Storing API dta in state
-    const [holding, setHolding] = useState([]);
-    const [capital, setCapital] = useState([]);
+    const [holdings, setHolding] = useState([]);
 
 
     // Getting API data
@@ -32,15 +31,15 @@ const Dashboard = () => {
             <h1 className='text-3xl font-semibold mb-6'>Tax Optimization</h1>
 
             {/* Card Section */}
-            <section className='flex p-3 gap-x-5'>
+            <section className='flex flex-col md:flex-row p-3 gap-5'>
                 <CapitalCard />
                 <CapitalCard />
             </section>
 
 
             {/* Holding Data Section */}
-            <section className='p-4 border'>
-                <Table />
+            <section className='p-4 border overflow-y-auto scroll-smooth'>
+                <Table holdings={holdings} />
             </section>
 
         </main>

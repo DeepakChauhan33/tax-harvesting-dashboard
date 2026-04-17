@@ -4,7 +4,7 @@ const CapitalCard = () => {
     return (
 
         // Capital Card  
-        <div className=" p-5 rounded-md w-1/2 bg-gray-700">
+        <div className=" p-5 rounded-md w-full md:w-1/2 bg-gray-700">
             <h2 className="text-lg font-semibold mb-4">Pre Harvesting</h2>
 
             <table className="table-auto border-collapse  w-full text-left">
