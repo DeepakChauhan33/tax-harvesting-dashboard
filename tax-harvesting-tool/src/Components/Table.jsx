@@ -5,7 +5,21 @@ import React from 'react'
 import TableRow from './TableRow'
 
 
-const Table = ({ holdings }) => {
+const Table = ({ holdings, selected, setSelected }) => {
+
+
+    const handleSelect = (holding, checked) => {
+        if (checked) {
+            setSelected(prev => [...prev, holding]);
+        } else {
+            setSelected(prev => prev.filter(item => item.coin !== holding.coin));
+        }
+    };
+
+
+
+
+
     return (
         <table className='w-full  rounded-md overflow-y-auto scroll-smooth  '>
 
@@ -32,7 +46,7 @@ const Table = ({ holdings }) => {
             <tbody>
 
                 {holdings.map((holding) => (
-                    <TableRow holding={holding} />
+                    <TableRow holding={holding} selected={selected} setSelected={setSelected} handleSelect={handleSelect} />
                 ))}
             </tbody>
         </table>

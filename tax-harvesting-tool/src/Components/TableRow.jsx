@@ -1,17 +1,20 @@
 import React from 'react'
 
-// COMPONENTS
-import Checkbox from './Checkbox'
+
+const TableRow = ({ holding, selected, setSelected, handleSelect }) => {
 
 
-const TableRow = ({ holding }) => {
   return (
     <tr id={holding.coin} className='border-b border-gray-600 hover:bg-gray-600/50 '>
 
       {/* CHECKBOX */}
 
       <td className='p-3 text-center'>
-        <Checkbox />
+        <input type="checkbox" 
+        className="h-5 w-5 cursor-pointer"
+        checked={selected.some(item => item.coin === holding.coin)}
+        onChange={(e) => handleSelect(holding, e.target.checked)}
+        />
       </td>
 
 
@@ -65,6 +68,7 @@ const TableRow = ({ holding }) => {
 
 
       {/* LONG TERM GAIN PRICE */}
+
       <td className='p-3 text-end space-y-0.5'>
         <p className='text-lg font-semibold'>${holding.ltcg.gain.toFixed(2)}M</p>
         <sapn className=" text-sm">{holding.ltcg.balance.toFixed(1)}{holding.coin}</sapn>
@@ -72,8 +76,9 @@ const TableRow = ({ holding }) => {
 
 
       {/* AMOUNT TO SELL */}
+      
       <td className='p-3 text-end space-y-0.5'>
-        -
+         {selected.some(item => item.coin === holding.coin) ? holding.totalHolding.toFixed(6) : "-"}
       </td>
 
     </tr>
