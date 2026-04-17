@@ -6,7 +6,7 @@ import Checkbox from './Checkbox'
 
 const TableRow = ({ holding }) => {
   return (
-    <tr id={holding.coin} className='border-b border-gray-600 hover:bg-gray-600/50'>
+    <tr id={holding.coin} className='border-b border-gray-600 hover:bg-gray-600/50 '>
 
       {/* CHECKBOX */}
 
@@ -18,7 +18,7 @@ const TableRow = ({ holding }) => {
 
       {/* LOGO & COIN NAME */}
 
-      <td className='flex gap-4 p-3 text-start'>
+      <td className=' flex gap-4 p-3 text-start '>
         {/* Logo Image Div */}
         <div className='h-7 w-7 md:h-10 md:w-10 flex items-center justify-center'>
           <img src={holding.logo} alt={holding.coinName} className='h-full w-full' />

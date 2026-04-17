@@ -1,6 +1,16 @@
 import React from 'react'
 
-const CapitalCard = () => {
+const CapitalCard = ({ capital }) => {
+
+
+    if (!capital) {
+        console.log("Loading")
+        return "Loading...."
+    }
+
+    const ltcgProfit = capital.capitalGains.ltcg.profits;
+    console.log(ltcgProfit);
+
     return (
 
         // Capital Card  
@@ -19,8 +29,8 @@ const CapitalCard = () => {
                 <tbody>
                     <tr>
                         <td className=" px-4 py-2">Profits</td>
-                        <td className=" px-4 py-2">$4,049.48</td>
-                        <td className=" px-4 py-2">$0.00</td>
+                        <td className=" px-4 py-2">$</td>
+                        <td className=" px-4 py-2">$</td>
                     </tr>
                     <tr>
                         <td className=" px-4 py-2">Losses</td>
