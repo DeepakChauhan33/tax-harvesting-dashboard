@@ -31,14 +31,14 @@ const Dashboard = () => {
             <h1 className='text-3xl font-semibold mb-6'>Tax Optimization</h1>
 
             {/* Card Section */}
-            <section className='flex flex-col md:flex-row p-3 gap-5'>
+            <section className='flex flex-col md:flex-row p-3 gap-5 mb-8'>
                 <CapitalCard />
                 <CapitalCard />
             </section>
 
 
             {/* Holding Data Section */}
-            <section className='p-4 border overflow-y-auto scroll-smooth'>
+            <section className='p-4 rounded-sm overflow-y-auto scroll-smooth bg-gray-700'>
                 <Table holdings={holdings} />
             </section>
 
