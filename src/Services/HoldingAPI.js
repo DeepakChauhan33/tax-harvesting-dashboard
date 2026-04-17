@@ -220,7 +220,7 @@ const holdingData = [
             "balance": 0.0004211938732637162,
             "gain": 89.40775336229291
         },
-        "ltcg": {
+        "ltcg": {   
             "balance": 0,
             "gain": 0
         }
