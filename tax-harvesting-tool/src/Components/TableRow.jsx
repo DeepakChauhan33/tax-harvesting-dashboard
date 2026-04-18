@@ -10,10 +10,10 @@ const TableRow = ({ holding, selected, setSelected, handleSelect }) => {
       {/* CHECKBOX */}
 
       <td className='p-3 text-center'>
-        <input type="checkbox" 
-        className="h-5 w-5 cursor-pointer"
-        checked={selected.some(item => item.coin === holding.coin)}
-        onChange={(e) => handleSelect(holding, e.target.checked)}
+        <input type="checkbox"
+          className="h-5 w-5 cursor-pointer"
+          checked={selected.some(item => item.coin === holding.coin)}
+          onChange={(e) => handleSelect(holding, e.target.checked)}
         />
       </td>
 
@@ -61,7 +61,8 @@ const TableRow = ({ holding, selected, setSelected, handleSelect }) => {
       {/* SHORT TERM GAIN PRICE */}
 
       <td className='p-3 text-end space-y-0.5'>
-        <p className='text-lg font-semibold text-red-400'>${holding.stcg.gain.toFixed(2)}M</p>
+        <p className={`text-lg font-semibold ${holding.stcg.gain < 0 ? "text-red-400" : "text-green-400"}`}>
+          {holding.stcg.gain < 0 ? "-" : "+"} ${Math.abs(holding.stcg.gain).toFixed(2)}M</p>
         <sapn className=" text-sm">{holding.stcg.balance.toFixed(5)}{holding.coin}</sapn>
       </td>
 
@@ -76,9 +77,9 @@ const TableRow = ({ holding, selected, setSelected, handleSelect }) => {
 
 
       {/* AMOUNT TO SELL */}
-      
+
       <td className='p-3 text-end space-y-0.5'>
-         {selected.some(item => item.coin === holding.coin) ? holding.totalHolding.toFixed(6) : "-"}
+        {selected.some(item => item.coin === holding.coin) ? holding.totalHolding.toFixed(6) : "-"}
       </td>
 
     </tr>
