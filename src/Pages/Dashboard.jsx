@@ -10,7 +10,7 @@ import CapitalCard from '../Components/CapitalCard';
 import Table from '../Components/Table';
 
 
-// API Function
+// API FUNCTION
 import { getHolding } from '../Services/HoldingAPI';
 import { getCapital } from '../Services/CapitalAPI';
 
@@ -22,6 +22,9 @@ const Dashboard = () => {
 
     // State for holding 
     const [selectedHoldings, setSelectedHoldings] = useState([]);
+
+
+    const [showAll, setShowAll] = useState(false);
 
 
     // Getting API data
@@ -38,6 +41,9 @@ const Dashboard = () => {
 
 
 
+
+
+    // Function Calculate the Updated Data
     const getUpdatedCapital = () => {
 
         if (!capital) return null;
@@ -94,7 +100,7 @@ const Dashboard = () => {
 
 
                 {/* CARD SECTION */}
-                <section className='flex flex-col md:flex-row gap-5 mb-8 overflow-y-auto scroll-smooth'>
+                <section className='flex flex-col md:flex-row gap-5 mb-8 overflow-y-auto scroll-smooth '>
                     <CapitalCard capital={capital} title="Pre Harvesting" />
                     <CapitalCard capital={updatedCapital} title="After Harvesting" />
                 </section>
@@ -103,7 +109,7 @@ const Dashboard = () => {
                 {/* HOLDING DATA SECTION */}
                 <section className='p-4 rounded-sm overflow-y-auto scroll-smooth bg-gray-700'>
                     {/* Table */}
-                    <Table holdings={holdings} selected={selectedHoldings} setSelected={setSelectedHoldings} />
+                    <Table holdings={holdings} selected={selectedHoldings} setSelected={setSelectedHoldings} showAll={showAll} setShowAll={setShowAll} />
                 </section>
 
             </main>
