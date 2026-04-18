@@ -56,7 +56,7 @@ const Table = ({ holdings, selected, setSelected, showAll, setShowAll }) => {
                 </tbody>
             </table>
 
-            {/* View All Btn Component */}
+            {/* View All Btn Component   */}
             <ViewAllBtn showAll={showAll} setShowAll={setShowAll} />
 
         </>
