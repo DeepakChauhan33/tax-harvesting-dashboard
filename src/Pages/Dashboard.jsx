@@ -90,7 +90,7 @@ const Dashboard = () => {
             </header>
 
 
-            <main className='bg-gray-800 min-h-screen text-white px-4 py-3 sm:px-6 sm:py-5 lg:px-8 lg:py-6'>
+            <main className='bg-gray-800 min-h-screen text-white px-3 py-3 sm:px-6 sm:py-5 lg:px-8 lg:py-6'>
 
 
 

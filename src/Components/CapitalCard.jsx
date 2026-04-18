@@ -39,8 +39,8 @@ const CapitalCard = ({ capital, title }) => {
                 <thead className="">
                     <tr>
                         <th className="px-2  lg:px-4 py-2"></th>
-                        <th className="px-2  lg:px-4 py-2 text-sm lg:text-lg text-end ">Short-term</th>
-                        <th className="px-2  lg:px-4 py-2 text-sm lg:text-lg text-end ">Long-term</th>
+                        <th className="px-2  lg:px-4 py-2 text-sm lg:text-lg text-end">Short-term</th>
+                        <th className="px-2  lg:px-4 py-2 text-sm lg:text-lg text-end">Long-term</th>
                     </tr>
                 </thead>
 
@@ -56,7 +56,7 @@ const CapitalCard = ({ capital, title }) => {
                         <td className="px-2  lg:px-4 py-2 text-sm lg:text-lg">- $ {Math.abs(ltcgLosses)}</td>
                     </tr>
                     <tr className='text-end'>
-                        <td className="px-2  lg:px-4 py-2 text-start">Net Capital Gains</td>
+                        <td className="px-2  lg:px-4 py-2 text-start text-sm lg:text-lg">Net Capital Gains</td>
                         <td className="px-2  lg:px-4 py-2 text-sm lg:text-lg"><span className={stcgNet < 0 ? "block" : "hidden"}>-</span>$ {stcgNet}</td>
                         <td className="px-2  lg:px-4 py-2 text-sm lg:text-lg"><span className={stcgNet < 0 ? "block" : "hidden"}>-</span>$ {ltcgNet}</td>
                     </tr>
