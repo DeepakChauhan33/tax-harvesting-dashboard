@@ -95,7 +95,15 @@ const Dashboard = () => {
 
 
 
-                <h1 className='text-xl sm:text-2xl lg:text-3xl font-semibold mb-6'>Tax Harvesting <span className='text-[16px] underline cursor-pointer text-blue-700 font-light'>How it works ?</span></h1>
+                <h1
+                    className='text-xl sm:text-2xl lg:text-3xl font-semibold mb-6'>
+                    Tax Harvesting
+                    <span className='text-[16px] underline cursor-pointer text-blue-700 font-light'
+                        // Title random text
+                        title='Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur veniam eveniet ab natus quibusdam, nobis nisi facilis, accusamus quaerat consequatur obcaecati ducimus. Ipsam quidem rerum suscipit ipsum provident doloribus fuga.'>
+                        How it works ?
+                    </span>
+                </h1>
 
 
 
