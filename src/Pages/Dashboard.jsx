@@ -1,5 +1,6 @@
 import React from 'react'
 
+// HOOKS
 import { useState, useEffect } from 'react';
 
 // LOGO IMAGE
@@ -13,6 +14,7 @@ import Table from '../Components/Table';
 // API FUNCTION
 import { getHolding } from '../Services/HoldingAPI';
 import { getCapital } from '../Services/CapitalAPI';
+
 
 const Dashboard = () => {
 
@@ -55,14 +57,14 @@ const Dashboard = () => {
             const stcgGain = item.stcg.gain;
             const ltcgGain = item.ltcg.gain;
 
-            // STCG
+            // Short Term Capital Gain
             if (stcgGain > 0) {
                 updated.capitalGains.stcg.profits += stcgGain;
             } else {
                 updated.capitalGains.stcg.losses += Math.abs(stcgGain);
             }
 
-            // LTCG
+            // Long Term Capital Gain
             if (ltcgGain > 0) {
                 updated.capitalGains.ltcg.profits += ltcgGain;
             } else {
